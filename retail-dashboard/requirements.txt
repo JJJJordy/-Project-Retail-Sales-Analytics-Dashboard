@@ -1,26 +1,5 @@
-touch requirements.txt
-```
-
-Open it and add:
-```
 pandas
 streamlit
 plotly
 sqlalchemy
 openpyxl
-```
-
----
-
-**Your project folder should now look like this:**
-```
-retail-dashboard/
-│
-├── app.py
-├── clean.py
-├── database.py
-├── explore.py
-├── requirements.txt
-├── superstore_clean.csv
-├── superstore.db
-└── .gitignore
