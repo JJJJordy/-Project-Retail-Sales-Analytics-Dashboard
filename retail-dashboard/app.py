@@ -16,7 +16,7 @@ st.set_page_config(
 # ---- BUILD DATABASE IF IT DOESN'T EXIST ----
 def build_database():
     base_dir = os.path.dirname(os.path.abspath(__file__))
-    csv_path = os.path.join(base_dir, 'superstore_clean.csv')
+    csv_path = os.path.join(base_dir, 'Superstore_clean.csv')
     db_path = os.path.join(base_dir, 'superstore.db')
     conn = sqlite3.connect(db_path)
     df = pd.read_csv(csv_path)
