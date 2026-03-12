@@ -15,7 +15,7 @@ st.set_page_config(
 # ---- BUILD DATABASE IF IT DOESN'T EXIST ----
 def build_database():
     conn = sqlite3.connect('superstore.db')
-    df = pd.read_csv('superstore_clean.csv')
+    df = pd.read_csv('Superstore_clean.csv')
     df.to_sql('orders', conn, if_exists='replace', index=False)
     conn.close()
 
