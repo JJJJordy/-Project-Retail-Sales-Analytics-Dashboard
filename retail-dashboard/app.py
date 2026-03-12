@@ -12,10 +12,19 @@ st.set_page_config(
 )
 
 
-# --- LOAD DATA ---
+# ---- BUILD DATABASE IF IT DOESN'T EXIST ----
+def build_database():
+    conn = sqlite3.connect('superstore.db')
+    df = pd.read_csv('superstore_clean.csv')
+    df.to_sql('orders', conn, if_exists='replace', index=False)
+    conn.close()
+
+build_database()
+
+# ---- LOAD DATA ----
 @st.cache_data
 def load_data():
-    conn = sqlite3.connect("Superstore.db")
+    conn = sqlite3.connect('superstore.db')
 
     orders = pd.read_sql_query("SELECT * FROM orders", conn)
     
