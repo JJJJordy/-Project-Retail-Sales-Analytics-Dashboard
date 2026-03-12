@@ -1,1 +1,6 @@
-python-3.11
+cat runtime.txt
+3.11
+pandas
+plotly
+sqlalchemy
+openpyxl
