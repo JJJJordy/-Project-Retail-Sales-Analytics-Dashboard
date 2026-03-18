@@ -45,16 +45,3 @@ streamlit run app.py
 ```
 
 ```
-
----
-
-## 🌐 Step 5C: Update .gitignore & Push Everything
-
-We need to **remove `*.csv` from your `.gitignore`** since Streamlit Cloud needs the CSV file to build the database. Open `.gitignore` and remove the `*.csv` line so it looks like this:
-```
-
-venv/
-**pycache**/
-\*.pyc
-.DS_Store
-superstore.db
